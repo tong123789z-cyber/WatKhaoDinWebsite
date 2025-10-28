@@ -1,12 +1,14 @@
 /* 1. Global Styles and Typography */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 body {
     font-family: 'Sarabun', sans-serif;
     line-height: 1.6; /* เพิ่มระยะห่างบรรทัด */
     color: #333; /* สีตัวอักษรเข้มขึ้น */
     background-color: #f8f8f8; /* พื้นหลังสีเทาอ่อนมาก ๆ */
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
 }
 
 h1, h2, h3, h4 {
@@ -124,4 +126,102 @@ section {
     background-color: #DAA520; /* สีทองเข้มขึ้น */
 }
 
-/* 4. Feature
+/* 4. Feature Items (จุดเด่น/สถานที่สำคัญ) */
+.feature-grid {
+    display: flex;
+    gap: 30px;
+    padding-top: 30px;
+}
+
+.feature-item {
+    flex: 1;
+    background-color: #fff;
+    padding: 25px; /* เพิ่ม padding */
+    border-radius: 12px; /* โค้งมนมากขึ้น */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* เงาอ่อน ๆ สวยงาม */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* เพิ่ม Animation */
+}
+
+.feature-item:hover {
+    transform: translateY(-8px); /* ยกการ์ดขึ้นเล็กน้อยเมื่อเมาส์ชี้ */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* เงาเข้มขึ้น */
+}
+
+.feature-item img {
+    width: 100%;
+    height: 220px; /* เพิ่มความสูงรูปภาพเล็กน้อย */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.feature-item h4 {
+    color: #8B4513;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+/* 5. Footer */
+footer {
+    background-color: #4B0082;
+    color: white;
+    text-align: center;
+    padding: 25px 0; /* เพิ่ม padding */
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* 6. Contact Page Specifics (ถ้ามี) */
+.contact-grid {
+    display: flex;
+    gap: 30px;
+}
+
+.contact-info, .contact-form {
+    flex: 1;
+}
+
+/* 7. MEDIA QUERIES สำหรับมือถือ (ทำให้ Responsive) */
+@media (max-width: 900px) {
+    .feature-grid {
+        flex-direction: column; /* ให้การ์ดเรียงเป็นแนวตั้งบนแท็บเล็ต/มือถือ */
+    }
+}
+
+@media (max-width: 600px) {
+    /* ปรับ Navigation Bar สำหรับมือถือ */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 15px;
+    }
+    .navbar .logo {
+        padding-left: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding-right: 0;
+    }
+    .navbar nav ul li {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+    }
+    .hero {
+        padding: 100px 10px;
+    }
+    .hero h1 {
+        font-size: 2em;
+    }
+    .contact-grid {
+        flex-direction: column; /* จัดเรียงช่องติดต่อให้เป็นแนวตั้ง */
+    }
+    section {
+        padding: 50px 15px;
+    }
+}
