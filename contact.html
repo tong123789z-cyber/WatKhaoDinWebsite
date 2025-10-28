@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ติดต่อและแผนที่ | วัดเขาดิน</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">วัดเขาดิน</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">หน้าแรก</a></li>
+                <li><a href="about.html">เกี่ยวกับวัด</a></li>
+                <li><a href="events.html">กิจกรรม</a></li>
+                <li><a href="contact.html" class="active">ติดต่อและแผนที่</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contact-content" class="container">
+        <h2>ติดต่อวัดเขาดินและแผนที่</h2>
+        
+        <div class="contact-grid">
+            
+            <section class="contact-info">
+                <h3>ข้อมูลติดต่อ</h3>
+                <p><strong>ที่ตั้ง:</strong> ตำบลเขาแดง อำเภอกุยบุรี จังหวัดประจวบคีรีขันธ์</p>
+                <p><strong>เบอร์โทรศัพท์:</strong> 032-612-XXX</p>
+                <p><strong>อีเมล:</strong> watkhaodin@temp.mail</p>
+                
+                <h3 style="margin-top: 30px;">ส่งข้อความถึงวัด</h3>
+                <form class="contact-form">
+                    <label for="name">ชื่อ-นามสกุล:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">อีเมล:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="subject">เรื่องที่ต้องการติดต่อ:</label>
+                    <input type="text" id="subject" name="subject" required>
+                    
+                    <label for="message">ข้อความ:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    
+                    <button type="submit" class="button">ส่งข้อความ</button>
+                </form>
+            </section>
+
+            <section class="map-section">
+                <h3>แผนที่การเดินทาง</h3>
+                <p>สามารถปักหมุดเพื่อเดินทางมายังวัดเขาดินได้ทันที</p>
+                <div class="map-embed">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1551.705363884612d6.935937351557053d2.679234957859871d2!2d100!3b1!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x301e7e462f8b1c4b%3A0x633390d4025f1870!2z4Lir4Lin4LiZ4Liy4Lih4Liy4LiB4Liy4LiZ4Liy4LiZ4Liy!5e0!3m2!1sen!2sth!4v1631484024176!5m2!1sen!2sth" 
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 วัดเขาดิน กุยบุรี | สงวนลิขสิทธิ์</p>
+        <p>ที่อยู่: อำเภอกุยบุรี จังหวัดประจวบคีรีขันธ์</p>
+    </footer>
+
+</body>
+</html>

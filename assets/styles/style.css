@@ -1,0 +1,363 @@
+/* 1. การตั้งค่าพื้นฐาน (Reset/Base Styles) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Sarabun', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: #4B0082; /* สีม่วงเข้ม/กรมท่าสำหรับหัวข้อ */
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* 2. ส่วนแถบนำทาง (Navigation Bar) */
+.navbar {
+    background-color: #ffffff;
+    color: #333;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #8B4513; /* สีน้ำตาลทอง */
+    padding-left: 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    padding-right: 20px;
+}
+
+.navbar ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    background-color: #FFFACD;
+    color: #4B0082;
+    border-radius: 5px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #FFD700;
+    color: #4B0082;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #FFA500;
+}
+
+/* 3. ส่วนท้ายเว็บไซต์ (Footer) */
+footer {
+    background-color: #4B0082;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* 4. การจัดรูปแบบเฉพาะหน้า index.html (หน้าแรก) */
+#hero {
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px 40px;
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+#hero h1 {
+    color: white;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.intro-grid {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.intro-grid .intro-text {
+    flex: 2;
+}
+
+.intro-grid .intro-image {
+    flex: 1;
+}
+
+.intro-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.feature-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.feature-item h4 {
+    color: #8B4513;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* 5. การจัดรูปแบบเฉพาะหน้า about.html (เกี่ยวกับวัด) */
+#about-content {
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+
+#about-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #8B4513;
+}
+
+.summary-text {
+    font-size: 1.15em;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    font-weight: 500;
+    padding: 20px;
+    background-color: #fff;
+    border-left: 5px solid #4B0082;
+}
+
+.history-detail h3 {
+    text-align: left;
+    color: #4B0082;
+    font-size: 1.8em;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.history-detail p {
+    font-size: 1.05em;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+.detail-grid {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #fcfcfc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.detail-grid .detail-text {
+    flex: 2;
+}
+
+.detail-grid .detail-image {
+    flex: 1;
+    text-align: center;
+}
+
+.detail-grid img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover; /* โค้ดสำคัญสำหรับควบคุมรูปภาพในหน้านี้ */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 6. การจัดรูปแบบเฉพาะหน้า events.html (กิจกรรม) */
+#events-content {
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+
+#events-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #8B4513;
+}
+
+.summary-event {
+    font-size: 1.1em;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 50px auto;
+    padding: 15px;
+    background-color: #FFFACD;
+    border-radius: 5px;
+}
+
+.event-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.event-item {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.event-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.event-item .event-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.event-item .event-info {
+    flex: 2;
+}
+
+.event-item img {
+    width: 100%;
+    height: 250px; /* กำหนดความสูง */
+    object-fit: cover; /* โค้ดสำคัญสำหรับควบคุมรูปภาพในหน้านี้ */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 7. การจัดรูปแบบเฉพาะหน้า contact.html (ติดต่อและแผนที่) */
+#contact-content {
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+
+#contact-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #4B0082;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info h3, .map-section h3 {
+    text-align: left;
+    color: #8B4513;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #333;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Sarabun', sans-serif;
+    font-size: 1em;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button.button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.map-embed {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
